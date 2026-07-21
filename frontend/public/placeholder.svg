@@ -1,0 +1,109 @@
+<!--
+  AtmoSync AI — Placeholder SVG
+  Purpose: Responsive SVG placeholder image for missing assets (charts, shipment images, etc.)
+  Used when: An image or asset fails to load or hasn't been provided yet.
+  Features:
+    - Responsive viewBox for scaling
+    - Cold-chain themed color palette (deep blue + cyan)
+    - Clean, professional design with iconography
+    - Accessible with proper ARIA attributes
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 400 300"
+  width="100%"
+  height="100%"
+  preserveAspectRatio="xMidYMid meet"
+  role="img"
+  aria-label="AtmoSync AI — Placeholder image. Cold chain monitoring asset not available."
+>
+  <defs>
+    <!-- Background gradient — cold chain theme -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F9FF" />
+      <stop offset="100%" stop-color="#E8F0FE" />
+    </linearGradient>
+
+    <!-- Icon gradient -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B3D91" />
+      <stop offset="100%" stop-color="#00B4D8" />
+    </linearGradient>
+
+    <!-- Dashed border pattern -->
+    <pattern id="dashPattern" patternUnits="userSpaceOnUse" width="10" height="10">
+      <line x1="0" y1="0" x2="10" y2="10" stroke="#B0C4DE" stroke-width="1" stroke-dasharray="4 4" />
+    </pattern>
+
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B3D91" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background rectangle -->
+  <rect x="0" y="0" width="400" height="300" rx="12" ry="12" fill="url(#bgGradient)" />
+
+  <!-- Dashed border frame -->
+  <rect x="20" y="20" width="360" height="260" rx="8" ry="8" fill="none" stroke="#B0C4DE" stroke-width="1.5" stroke-dasharray="8 6" />
+
+  <!-- Cold chain icon: snowflake/thermometer hybrid -->
+  <g transform="translate(200, 130)" filter="url(#dropShadow)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="48" fill="none" stroke="url(#iconGradient)" stroke-width="2.5" />
+
+    <!-- Snowflake arms -->
+    <g stroke="#0B3D91" stroke-width="2" stroke-linecap="round">
+      <!-- Vertical arm -->
+      <line x1="0" y1="-38" x2="0" y2="38" />
+      <!-- Horizontal arm -->
+      <line x1="-38" y1="0" x2="38" y2="0" />
+      <!-- Diagonal arms -->
+      <line x1="-27" y1="-27" x2="27" y2="27" />
+      <line x1="27" y1="-27" x2="-27" y2="27" />
+    </g>
+
+    <!-- Snowflake branch tips -->
+    <g fill="none" stroke="#00B4D8" stroke-width="1.8" stroke-linecap="round">
+      <!-- Top V -->
+      <polyline points="-8,-38 0,-45 8,-38" />
+      <!-- Bottom V -->
+      <polyline points="-8,38 0,45 8,38" />
+      <!-- Left V -->
+      <polyline points="-38,-8 -45,0 -38,8" />
+      <!-- Right V -->
+      <polyline points="38,-8 45,0 38,8" />
+    </g>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="4" fill="#00B4D8" />
+  </g>
+
+  <!-- Thermometer bar indicator (temperature scale) -->
+  <g transform="translate(200, 210)">
+    <rect x="-50" y="0" width="100" height="4" rx="2" fill="#D5E4F3" />
+    <rect x="-50" y="0" width="60" height="4" rx="2" fill="url(#iconGradient)" />
+    <circle cx="-50" cy="2" r="5" fill="#0B3D91" />
+    <circle cx="50" cy="2" r="5" fill="#D5E4F3" />
+  </g>
+
+  <!-- Placeholder text -->
+  <text
+    x="200"
+    y="245"
+    text-anchor="middle"
+    font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    font-size="13"
+    fill="#7A8BA8"
+    font-weight="500"
+  >
+    No Preview Available
+  </text>
+
+  <!-- Small decorative dots -->
+  <circle cx="320" cy="50" r="3" fill="#00B4D8" opacity="0.3" />
+  <circle cx="80" cy="260" r="2.5" fill="#0B3D91" opacity="0.2" />
+  <circle cx="340" cy="260" r="2" fill="#00B4D8" opacity="0.25" />
+  <circle cx="60" cy="50" r="2" fill="#0B3D91" opacity="0.2" />
+</svg>
+

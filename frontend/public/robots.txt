@@ -1,0 +1,26 @@
+# AtmoSync AI — Smart Cold Chain Monitoring Platform
+# robots.txt — Web crawler configuration
+
+# Allow all crawlers full access to index the application
+User-agent: *
+Allow: /
+
+# Disallow access to API endpoints
+Disallow: /api/
+
+# Disallow access to authentication pages
+Disallow: /login
+Disallow: /logout
+
+# Disallow access to user-specific profile pages
+Disallow: /profile
+
+# Disallow access to settings pages
+Disallow: /settings
+
+# Sitemap location — update the domain URL after deployment
+# Sitemap: https://your-domain.com/sitemap.xml
+
+# Crawl-delay: reduce server load if needed
+# Crawl-delay: 10
+
