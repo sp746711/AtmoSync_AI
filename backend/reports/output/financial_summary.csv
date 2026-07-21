@@ -1,0 +1,11 @@
+Metric,Value
+Total Inventory Value,127782112.718
+Total Financial Loss,13571706.103620002
+Loss % of Inventory,0.1062097488837984
+Total Net Financial Loss,729080.7887400594
+Net Loss % of Inventory,0.005705656083093996
+Total Insurance Claim Amount,4563497.50527997
+Total Recovery Amount,12842625.314879913
+Total Spoiled Quantity,35085.43696000001
+Loss Category Breakdown,"[{""Loss Category"": ""Low"", ""TotalInventoryValue"": 127714855.27800001, ""TotalFinancialLoss"": 13544803.12762, ""TotalNetFinancialLoss"": 729080.7887400595}, {""Loss Category"": ""Medium"", ""TotalInventoryValue"": 67257.44000000002, ""TotalFinancialLoss"": 26902.97600000001, ""TotalNetFinancialLoss"": 0.0}]"
+Top Recovery Opportunities (Origin->Destination),"[{""Origin City"": ""Bhubaneswar"", ""Destination City"": ""Gurugram"", ""Total Recovery Amount"": 251969.5199999998}, {""Origin City"": ""Ahmedabad"", ""Destination City"": ""Kochi"", ""Total Recovery Amount"": 242664.87999999957}, {""Origin City"": ""Srinagar"", ""Destination City"": ""Chennai"", ""Total Recovery Amount"": 197811.36799999975}, {""Origin City"": ""Chennai"", ""Destination City"": ""Visakhapatnam"", ""Total Recovery Amount"": 192026.2739999998}, {""Origin City"": ""Pune"", ""Destination City"": ""Chandigarh"", ""Total Recovery Amount"": 177586.5839999997}, {""Origin City"": ""Gurugram"", ""Destination City"": ""Bengaluru"", ""Total Recovery Amount"": 176213.5359999996}, {""Origin City"": ""Srinagar"", ""Destination City"": ""Pune"", ""Total Recovery Amount"": 170290.5599999998}, {""Origin City"": ""Bhopal"", ""Destination City"": ""Noida"", ""Total Recovery Amount"": 164850.4219999998}, {""Origin City"": ""Surat"", ""Destination City"": ""Jaipur"", ""Total Recovery Amount"": 155817.6419999997}, {""Origin City"": ""Bhubaneswar"", ""Destination City"": ""Bengaluru"", ""Total Recovery Amount"": 148750.27199999976}]"

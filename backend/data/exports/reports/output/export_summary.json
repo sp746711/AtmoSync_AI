@@ -1,0 +1,39 @@
+{
+  "project": "AtmoSync AI",
+  "export_destination": "D:\\projects\\AtmoSync_AI\\backend\\data\\exports\\reports\\output",
+  "export_start": "2026-07-18 23:32:08",
+  "export_end": "2026-07-18 23:32:12",
+  "total_exported_files": 8,
+  "dataset_row_counts": [
+    908,
+    7,
+    14,
+    10,
+    908,
+    7,
+    14,
+    10
+  ],
+  "dataset_column_counts": [
+    107,
+    2,
+    2,
+    2,
+    107,
+    2,
+    2,
+    2
+  ],
+  "dataset_file_sizes_bytes": [
+    1962364,
+    3863,
+    3005,
+    1893,
+    622200,
+    6211,
+    5907,
+    5536
+  ],
+  "export_status": "success",
+  "overall_export_success": true
+}
