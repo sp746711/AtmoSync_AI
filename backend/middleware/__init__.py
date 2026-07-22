@@ -11,11 +11,18 @@ import logging
 import time
 from typing import Awaitable, Callable
 
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 
-from backend.config.config import LOGGER_NAME
+from backend.config.config import (
+    ALLOWED_ORIGINS,
+    CORS_ALLOW_CREDENTIALS,
+    CORS_ALLOW_HEADERS,
+    CORS_ALLOW_METHODS,
+    LOGGER_NAME,
+)
 
 
 class RequestLoggingMiddleware(BaseHTTPMiddleware):
@@ -24,8 +31,8 @@ class RequestLoggingMiddleware(BaseHTTPMiddleware):
     async def dispatch(
         self,
         request: Request,
-        call_next: Callable[[Request], Awaitable[Response]],
-    ) -> Response:
+        call_next: Callable[[Request], "Awaitable[JSONResponse]"],
+    ) -> JSONResponse:
         start_time = time.perf_counter()
         response = await call_next(request)
         elapsed = time.perf_counter() - start_time
@@ -47,17 +54,16 @@ class ErrorHandlingMiddleware(BaseHTTPMiddleware):
     async def dispatch(
         self,
         request: Request,
-        call_next: Callable[[Request], Awaitable[Response]],
-    ) -> Response:
+        call_next: Callable[[Request], "Awaitable[JSONResponse]"],
+    ) -> JSONResponse:
         try:
             return await call_next(request)
         except Exception as exc:
             logger = logging.getLogger(LOGGER_NAME)
             logger.exception("Unhandled error processing request: %s %s", request.method, request.url.path)
-            return Response(
-                content='{"detail": "Internal server error"}',
+            return JSONResponse(
+                content={"detail": "Internal server error"},
                 status_code=500,
-                media_type="application/json",
             )
 
 
@@ -65,10 +71,10 @@ def register_middleware(app: FastAPI) -> None:
     """Register all middleware on a FastAPI application instance."""
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
+        allow_origins=ALLOWED_ORIGINS,
+        allow_credentials=CORS_ALLOW_CREDENTIALS,
+        allow_methods=CORS_ALLOW_METHODS,
+        allow_headers=CORS_ALLOW_HEADERS,
     )
     app.add_middleware(RequestLoggingMiddleware)
     app.add_middleware(ErrorHandlingMiddleware)

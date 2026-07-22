@@ -1,6 +1,6 @@
 Insight,Value
 Highest loss category,Low
-Most delayed route,RTE-9810A785
+Most delayed route,RTE-7F91720C
 Most affected product,Frozen French Fries
 Most affected city,Jaipur
 Most affected transport mode,Sea
@@ -11,5 +11,5 @@ Business health (Loss fraction of inventory),0.1062097488837984
 Risk distribution,"{""Medium Risk"": 595, ""Low Risk"": 176, ""High Risk"": 136, ""Critical Risk"": 1}"
 Insurance threshold (Loss fraction),0.15
 Recovery threshold (Loss fraction),0.07
-Operational Summary (CSV payload),"[{""Metric"": ""Average Delay Hours"", ""Value"": 7.290870044052863}, {""Metric"": ""Temperature Compliance Rate (%)"", ""Value"": 89.97797356828194}, {""Metric"": ""Humidity Compliance Rate (%)"", ""Value"": 93.5022026431718}, {""Metric"": ""Battery Health Rate (%)"", ""Value"": 91.96035242290749}, {""Metric"": ""Delay Compliance Rate (%)"", ""Value"": 60.352422907488986}, {""Metric"": ""Most Delayed Route"", ""Value"": ""RTE-9810A785""}]"
+Operational Summary (CSV payload),"[{""Metric"": ""Average Delay Hours"", ""Value"": 7.290870044052863}, {""Metric"": ""Temperature Compliance Rate (%)"", ""Value"": 89.97797356828194}, {""Metric"": ""Humidity Compliance Rate (%)"", ""Value"": 93.5022026431718}, {""Metric"": ""Battery Health Rate (%)"", ""Value"": 91.96035242290749}, {""Metric"": ""Delay Compliance Rate (%)"", ""Value"": 60.352422907488986}, {""Metric"": ""Most Delayed Route"", ""Value"": ""RTE-7F91720C""}]"
 Quality Summary (CSV payload),"[{""Metric"": ""Temperature Excursion Rate (%)"", ""Value"": 10.022026431718063}, {""Metric"": ""Humidity Excursion Rate (%)"", ""Value"": 6.497797356828194}, {""Metric"": ""Highest Risk Category (by count)"", ""Value"": ""Medium Risk""}, {""Metric"": ""Top Affected Products (by spoiled quantity)"", ""Value"": ""[{\""Product Name\"":\""Frozen French Fries\"",\""Total Spoiled Quantity\"":1471.50624},{\""Product Name\"":\""Lettuce\"",\""Total Spoiled Quantity\"":1420.01744},{\""Product Name\"":\""Prawns\"",\""Total Spoiled Quantity\"":1406.03872},{\""Product Name\"":\""Salmon\"",\""Total Spoiled Quantity\"":1351.93336},{\""Product Name\"":\""Bread\"",\""Total Spoiled Quantity\"":1334.21288}]""}]"
