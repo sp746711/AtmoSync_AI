@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Chart System
+   AtmoSync AI Design System
+   
+   Reusable chart container styles. Charts render via Recharts.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Chart Container
+   -------------------------------------------------------------------------- */
+.chart-wrapper {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Chart Header
+   -------------------------------------------------------------------------- */
+.chart-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.chart-header__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.chart-header__subtitle {
+  margin-top: var(--space-0_5);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Chart Body
+   -------------------------------------------------------------------------- */
+.chart-body {
+  width: 100%;
+  min-height: 250px;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   Chart Loading State
+   -------------------------------------------------------------------------- */
+.chart-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-xl);
+  z-index: var(--z-10);
+}
+
+/* --------------------------------------------------------------------------
+   Chart Empty State
+   -------------------------------------------------------------------------- */
+.chart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  text-align: center;
+  padding: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   Chart Grid Layout
+   -------------------------------------------------------------------------- */
+.chart-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.chart-grid-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .chart-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.chart-grid-4 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .chart-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .chart-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Chart Legend
+   -------------------------------------------------------------------------- */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.chart-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.chart-legend__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode
+   -------------------------------------------------------------------------- */
+.dark .chart-header__title {
+  color: var(--color-dark-text-primary);
+}
+
+.dark .chart-header__subtitle {
+  color: var(--color-dark-text-secondary);
+}
+
+.dark .chart-loading {
+  background-color: rgba(17, 24, 39, 0.7);
+}
+
+.dark .chart-legend {
+  border-top-color: var(--color-dark-border);
+}
+
+.dark .chart-legend__item {
+  color: var(--color-dark-text-secondary);
+}
+

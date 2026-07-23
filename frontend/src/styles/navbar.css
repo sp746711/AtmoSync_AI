@@ -1,0 +1,306 @@
+/* ==========================================================================
+   Navbar System
+   AtmoSync AI Design System
+   
+   Global navbar styles. Components primarily use Tailwind (see Navbar.jsx).
+   These are fallback utility classes.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Navbar Base
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-40);
+  width: 100%;
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* --------------------------------------------------------------------------
+   Navbar Container
+   -------------------------------------------------------------------------- */
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .navbar__container {
+    padding: 0 var(--space-6);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Navbar Sections
+   -------------------------------------------------------------------------- */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navbar__center {
+  display: none;
+  flex: 1;
+  max-width: 28rem;
+  margin: 0 var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .navbar__center {
+    display: block;
+  }
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   Navbar Brand / Logo
+   -------------------------------------------------------------------------- */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2_5);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-primary-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+}
+
+.navbar__app-name {
+  display: none;
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 640px) {
+  .navbar__app-name {
+    display: inline;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Navbar Toggle (Mobile)
+   -------------------------------------------------------------------------- */
+.navbar__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  color: var(--color-gray-500);
+  transition: all var(--transition-fast);
+}
+
+.navbar__toggle:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+@media (min-width: 1024px) {
+  .navbar__toggle {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Navbar User Menu
+   -------------------------------------------------------------------------- */
+.navbar__user {
+  position: relative;
+}
+
+.navbar__user-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1_5);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.navbar__user-button:hover {
+  background-color: var(--color-gray-100);
+}
+
+.navbar__user-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary-700);
+}
+
+.navbar__user-name {
+  display: none;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 1024px) {
+  .navbar__user-name {
+    display: block;
+  }
+}
+
+.navbar__user-chevron {
+  display: none;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-gray-400);
+  transition: transform var(--transition-fast);
+}
+
+@media (min-width: 1024px) {
+  .navbar__user-chevron {
+    display: block;
+  }
+}
+
+.navbar__user-chevron--open {
+  transform: rotate(180deg);
+}
+
+/* --------------------------------------------------------------------------
+   Navbar Dropdown Menu
+   -------------------------------------------------------------------------- */
+.navbar__dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: var(--space-2);
+  width: 14rem;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-bg-primary);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-1);
+  z-index: var(--z-dropdown);
+}
+
+.navbar__dropdown-header {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: var(--space-1);
+}
+
+.navbar__dropdown-user-name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar__dropdown-user-email {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-0_5);
+}
+
+.navbar__dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-2_5) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  border-radius: var(--radius-lg);
+  transition: background-color var(--transition-fast);
+}
+
+.navbar__dropdown-item:hover {
+  background-color: var(--color-gray-50);
+}
+
+.navbar__dropdown-item--danger {
+  color: var(--color-danger);
+}
+
+.navbar__dropdown-item--danger:hover {
+  background-color: var(--color-danger-light);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode
+   -------------------------------------------------------------------------- */
+.dark .navbar {
+  background-color: var(--color-dark-bg-secondary);
+  border-bottom-color: var(--color-dark-border);
+}
+
+.dark .navbar__app-name {
+  color: var(--color-dark-text-primary);
+}
+
+.dark .navbar__toggle:hover {
+  background-color: var(--color-gray-800);
+  color: var(--color-gray-300);
+}
+
+.dark .navbar__user-button:hover {
+  background-color: var(--color-gray-800);
+}
+
+.dark .navbar__user-avatar {
+  background-color: var(--color-primary-900);
+  color: var(--color-primary-300);
+}
+
+.dark .navbar__user-name {
+  color: var(--color-dark-text-primary);
+}
+
+.dark .navbar__dropdown {
+  background-color: var(--color-dark-bg-secondary);
+  border-color: var(--color-dark-border);
+}
+
+.dark .navbar__dropdown-header {
+  border-bottom-color: var(--color-dark-border);
+}
+
+.dark .navbar__dropdown-user-name {
+  color: var(--color-dark-text-primary);
+}
+
+.dark .navbar__dropdown-item {
+  color: var(--color-gray-300);
+}
+
+.dark .navbar__dropdown-item:hover {
+  background-color: var(--color-gray-800);
+}
+
+.dark .navbar__dropdown-item--danger:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+

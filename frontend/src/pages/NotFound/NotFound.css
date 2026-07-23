@@ -1,1 +1,66 @@
-/* NotFound Styles */
+/**
+ * NotFound Styles
+ *
+ * Production-ready 404 page layout.
+ * Centered, responsive, accessible.
+ */
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.not-found__container {
+  text-align: center;
+  max-width: 480px;
+}
+
+.not-found__code {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 0.5rem;
+  color: var(--color-primary, #2563eb);
+}
+
+.not-found__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--color-text-primary, #1e293b);
+}
+
+.not-found__message {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 2rem;
+  color: var(--color-text-secondary, #64748b);
+}
+
+.not-found__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--color-primary, #2563eb);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.not-found__button:hover {
+  background-color: var(--color-primary-hover, #1d4ed8);
+}
+
+.not-found__button:focus-visible {
+  outline: 2px solid var(--color-primary, #2563eb);
+  outline-offset: 2px;
+}
+

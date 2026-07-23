@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Table System
+   AtmoSync AI Design System
+   
+   Reusable table styles.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base Table
+   -------------------------------------------------------------------------- */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   Table Header
+   -------------------------------------------------------------------------- */
+.table thead {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  padding: var(--space-3) var(--space-4);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* --------------------------------------------------------------------------
+   Table Body
+   -------------------------------------------------------------------------- */
+.table td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background-color var(--transition-fast);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Table Variants
+   -------------------------------------------------------------------------- */
+
+/* Striped */
+.table-striped tbody tr:nth-child(even) {
+  background-color: var(--color-bg-secondary);
+}
+
+.table-striped tbody tr:hover {
+  background-color: var(--color-gray-100);
+}
+
+/* Bordered */
+.table-bordered {
+  border: 1px solid var(--color-border);
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--color-border-light);
+}
+
+/* --------------------------------------------------------------------------
+   Table Sizes
+   -------------------------------------------------------------------------- */
+.table-sm th,
+.table-sm td {
+  padding: var(--space-2) var(--space-3);
+}
+
+.table-lg th,
+.table-lg td {
+  padding: var(--space-4) var(--space-6);
+}
+
+/* --------------------------------------------------------------------------
+   Table Utilities
+   -------------------------------------------------------------------------- */
+.table-nowrap {
+  white-space: nowrap;
+}
+
+.table-text-right {
+  text-align: right;
+}
+
+.table-text-center {
+  text-align: center;
+}
+
+.table-sortable th {
+  cursor: pointer;
+}
+
+.table-sortable th:hover {
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Table Status / Badge Cells
+   -------------------------------------------------------------------------- */
+.table-cell-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1_5);
+}
+
+/* --------------------------------------------------------------------------
+   Empty State
+   -------------------------------------------------------------------------- */
+.table-empty {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode
+   -------------------------------------------------------------------------- */
+.dark .table thead {
+  border-bottom-color: var(--color-dark-border);
+}
+
+.dark .table th {
+  color: var(--color-dark-text-secondary);
+}
+
+.dark .table td {
+  color: var(--color-dark-text-primary);
+}
+
+.dark .table tbody tr {
+  border-bottom-color: var(--color-dark-border);
+}
+
+.dark .table tbody tr:hover {
+  background-color: var(--color-dark-bg-primary);
+}
+
+.dark .table-striped tbody tr:nth-child(even) {
+  background-color: var(--color-dark-bg-primary);
+}
+
+.dark .table-striped tbody tr:hover {
+  background-color: var(--color-gray-800);
+}
+
+.dark .table-bordered {
+  border-color: var(--color-dark-border);
+}
+
+.dark .table-bordered th,
+.dark .table-bordered td {
+  border-color: var(--color-dark-border);
+}
+

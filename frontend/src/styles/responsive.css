@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Responsive Utilities
+   AtmoSync AI Design System
+   
+   Only reusable breakpoint utilities.
+   No page-specific responsive styles.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Visibility by Breakpoint
+   -------------------------------------------------------------------------- */
+
+/* Hidden on mobile, visible on md+ */
+@media (min-width: 768px) {
+  .hidden-md-up {
+    display: none !important;
+  }
+}
+
+/* Hidden on md and up, visible on mobile */
+@media (max-width: 767.98px) {
+  .hidden-md-down {
+    display: none !important;
+  }
+}
+
+/* Hidden on lg and up, visible on tablet/mobile */
+@media (max-width: 1023.98px) {
+  .hidden-lg-down {
+    display: none !important;
+  }
+}
+
+/* Visible only on lg and up */
+@media (min-width: 1024px) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Display Helpers by Breakpoint
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 640px) {
+  .sm\:block { display: block !important; }
+  .sm\:hidden { display: none !important; }
+  .sm\:flex { display: flex !important; }
+}
+
+@media (min-width: 768px) {
+  .md\:block { display: block !important; }
+  .md\:hidden { display: none !important; }
+  .md\:flex { display: flex !important; }
+  .md\:grid { display: grid !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:block { display: block !important; }
+  .lg\:hidden { display: none !important; }
+  .lg\:flex { display: flex !important; }
+}
+
+@media (min-width: 1280px) {
+  .xl\:block { display: block !important; }
+  .xl\:hidden { display: none !important; }
+}
+
+/* --------------------------------------------------------------------------
+   Container Max-Width Variants
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .container-sm { max-width: 640px; }
+}
+
+@media (min-width: 768px) {
+  .container-md { max-width: 768px; }
+}
+
+@media (min-width: 1024px) {
+  .container-lg { max-width: 1024px; }
+}
+
+@media (min-width: 1280px) {
+  .container-xl { max-width: 1280px; }
+}
+
+/* --------------------------------------------------------------------------
+   Order Utilities
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .md\:order-first { order: -1; }
+  .md\:order-last { order: 999; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:order-first { order: -1; }
+  .lg\:order-last { order: 999; }
+}
+
+/* --------------------------------------------------------------------------
+   Text Alignment by Breakpoint
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .md\:text-left { text-align: left; }
+  .md\:text-center { text-align: center; }
+  .md\:text-right { text-align: right; }
+}
+
+/* --------------------------------------------------------------------------
+   Gap Utilities by Breakpoint
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .md\:gap-4 { gap: var(--space-4); }
+  .md\:gap-6 { gap: var(--space-6); }
+  .md\:gap-8 { gap: var(--space-8); }
+}
+
+/* --------------------------------------------------------------------------
+   Padding Utilities by Breakpoint
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .md\:p-6 { padding: var(--space-6); }
+  .md\:p-8 { padding: var(--space-8); }
+  .md\:px-6 { padding-left: var(--space-6); padding-right: var(--space-6); }
+  .md\:px-8 { padding-left: var(--space-8); padding-right: var(--space-8); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:p-8 { padding: var(--space-8); }
+  .lg\:px-8 { padding-left: var(--space-8); padding-right: var(--space-8); }
+}
+
+/* --------------------------------------------------------------------------
+   Grid Columns by Breakpoint
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* --------------------------------------------------------------------------
+   Print Styles
+   -------------------------------------------------------------------------- */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+

@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Card System
+   AtmoSync AI Design System
+   
+   Reusable card styles. Components primarily use Tailwind (see Card.jsx).
+   These are fallback utility classes for card containers.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base Card
+   -------------------------------------------------------------------------- */
+.card {
+  background-color: var(--color-bg-primary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card-bordered {
+  border-color: var(--color-border);
+}
+
+.card-hoverable:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-dark);
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Card Padding
+   -------------------------------------------------------------------------- */
+.card-padding-none { padding: 0; }
+.card-padding-sm { padding: var(--space-3); }
+.card-padding-md { padding: var(--space-4); }
+.card-padding-lg { padding: var(--space-6); }
+.card-padding-xl { padding: var(--space-8); }
+
+/* --------------------------------------------------------------------------
+   Card Sections
+   -------------------------------------------------------------------------- */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.card-header__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-header__subtitle {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.card-body {
+  color: var(--color-text-primary);
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* --------------------------------------------------------------------------
+   Card Compact
+   -------------------------------------------------------------------------- */
+.card-compact > .card-header {
+  margin-bottom: var(--space-2);
+}
+
+.card-compact > .card-body,
+.card-compact > .card-footer {
+  margin-top: var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   Card Grid
+   -------------------------------------------------------------------------- */
+.card-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.card-grid-2 {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.card-grid-3 {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card-grid-4 {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+/* --------------------------------------------------------------------------
+   Stats / KPI Card
+   -------------------------------------------------------------------------- */
+.card-stat {
+  padding: var(--space-4);
+}
+
+.card-stat__label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.card-stat__value {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  line-height: var(--leading-tight);
+}
+
+.card-stat__description {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.card-stat__trend {
+  margin-top: var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Mode
+   -------------------------------------------------------------------------- */
+.dark .card {
+  background-color: var(--color-dark-bg-secondary);
+}
+
+.dark .card-bordered {
+  border-color: var(--color-dark-border);
+}
+
+.dark .card-header__title {
+  color: var(--color-dark-text-primary);
+}
+
+.dark .card-header__subtitle {
+  color: var(--color-dark-text-secondary);
+}
+
+.dark .card-footer {
+  border-top-color: var(--color-dark-border);
+}
+
+.dark .card-stat__value {
+  color: var(--color-dark-text-primary);
+}
+
