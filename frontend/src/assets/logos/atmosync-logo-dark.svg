@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" fill="none">
+  <rect width="40" height="40" rx="10" fill="#4F46E5"/>
+  <path d="M12 28V16l8-6 8 6v12H12z" fill="white" opacity="0.9"/>
+  <path d="M16 22v-4l4-3 4 3v4h-8z" fill="#4F46E5"/>
+  <circle cx="20" cy="14" r="2" fill="white"/>
+  <text x="48" y="26" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827">AtmoSync</text>
+  <text x="48" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9" font-weight="500" fill="#4F46E5" letter-spacing="3">AI</text>
+</svg>

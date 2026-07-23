@@ -1,3 +1,4 @@
+import L from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
 import MarkerPopup from './MarkerPopup';
 
