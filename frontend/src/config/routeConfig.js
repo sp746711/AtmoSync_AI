@@ -1,2 +1,0 @@
-// Route configuration
-export default {};
